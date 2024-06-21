@@ -1,0 +1,102 @@
+----------------------Documentation-----------------------
+
+
+------------------Basic Linux/Unix shell------------------
+
+
+System:
+• The attached code is written in 6 separate c files.
+• It functions as a Basic Linux Shell which implements the following commands:
+
+
+◦ Internal commands:
+
+
+▪ cd (Change the shell working directory.)
+• -M (will jump to directory given by the whole path name)
+• -N (will jump to directory inside the current directory as path will be given)
+• --help
+
+▪ echo (display a line of text)
+• -e (will put new line wherever \w will be inserted)
+• -e (will end the text wherever \c will be inserted)
+
+▪ pwd (print name of current/working directory)
+• -M (avoid all symlinks)
+• -N (use environment to get pwd, even if it contains symlinks)
+
+
+◦ External commands:
+
+
+▪ ls (list directory contents)
+• -a (do not ignore entries starting with .)
+• -1 (denote inode number and directory name simultaneously, present in particular directory)
+
+
+▪ cat (concatenate files and print on the standard output)
+• -d (display $$ at end of each line)
+• -n (display numbering of each line)
+
+
+▪ date (print or set the system date and time)
+• -r (get the gmt time)
+• -u (print date and time in proper format)
+
+
+▪ rm (remove files and directories)
+• -d (remove directories)
+• -v (remove files and also shows what is being done)
+
+
+▪ mkdir (make directories)
+• -v (new directory will be formed, by printing some message)
+• -m (make new directory and set its mode);
+
+
+• The major errors handled and assumptions made throughout the program were mainly the 
+ones:
+◦ Wrong commands
+◦ Wrong directory name
+◦ Wrong format of date
+◦ Directory already exists
+◦ Wrong path given
+◦ Wrong mode for creation of directory
+◦ Directory doesn’t exist
+◦ Wrong command line option
+◦ Can’t delete directories by default
+◦ file not present
+◦ The user would always enter a command (even though wrong)
+
+
+• Test Case:
+◦ ls
+◦ ls -1
+◦ ls -a
+◦ cat file1
+◦ cat file1 file2
+◦ cat -d file1
+◦ cat -n file2
+◦ date
+◦ date -r
+◦ date -u DD/MM/YYYY/HH/MM/SS
+◦ rm nameoffile
+◦ rm nameoffile1 fnameofile2
+◦ rm -d nameofdirectory1
+◦ rm -v nameoffile3
+◦ mkdir dir
+◦ mkdir dir1 dir2
+◦ mkdir -v dir3
+◦ mkdir -m=0100 dir4
+◦ cd -
+◦ cd path
+◦ cd -M path
+◦ cd -N path
+◦ cd –help
+◦ echo text
+◦ echo -e hel\wlo
+◦ echo -e hel\clo
+◦ echo -e hel\wl\co
+◦ pwd
+◦ pwd -M
+◦ pwd -N
